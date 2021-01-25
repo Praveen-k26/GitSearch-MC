@@ -1,34 +1,65 @@
 .App {
   text-align: center;
-  background: lightblue;
-  height: 1000px;
-  margin: 0 auto;
+  background: #8280b8;
+  height: 1200px;
+  /*margin: 0 auto;*/
+  /*padding: 0;*/
+}
+
+.title-div {
+  /*margin-top: 10%;*/
   padding: 0;
-
+  display: flex;
+  margin-left: 34%;
 }
 
-.title {
-  margin: 0;
-  padding: 0;
+.title-1 {
+  font-size: 100px;
+  font-weight: bold;
+  font-family: monospace;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
-.cardsdiv {
-  /*display: grid;*/
-  column-count: 2;
-  padding-top: 2%;
+.title-2 {
+  font-size: 100px;
+  font-weight: bold;
+  font-family: monospace;
+  color: forestgreen;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
-.cardspan {
-  float: right;
-  margin-right: 5%;
+.searchdiv {
+  display: inline-block;
+  font-weight: bolder;
+  margin-bottom: 5px;
+}
+.resultWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
 }
 
-.resultspan {
-  float:left;
-  margin-left: 18%;
-  width: 866px;
-  /*width: 500px;*/
-}
+
+
+/*.cardsdiv {*/
+/*  !*display: grid;*!*/
+/*  column-count: 2;*/
+/*  padding-top: 2%;*/
+/*}*/
+
+/*.cardspan {*/
+/*  float: right;*/
+/*  margin-right: 17%;*/
+/*}*/
+
+/*.resultspan {*/
+/*  float:left;*/
+/*  margin-left: 18%;*/
+/*  width: 866px;*/
+/*  !*width: 500px;*!*/
+/*}*/
 /*.App-logo {*/
 /*  height: 40vmin;*/
 /*  pointer-events: none;*/
@@ -63,3 +94,12 @@
 /*    transform: rotate(360deg);*/
 /*  }*/
 /*}*/
+
+/*.resultWrapper{*/
+/*  display: inline-block;*/
+/*  !*display: flex;*!*/
+/*  align-items: center;*/
+/*  align-content: center;*/
+/*  flex-direction: column;*/
+/*}*/
+

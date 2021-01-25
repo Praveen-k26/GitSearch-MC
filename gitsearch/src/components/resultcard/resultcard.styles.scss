@@ -1,12 +1,18 @@
 .wrapper {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  position: fixed;
+  height: fit-content;
+
   padding: 0;
   color: #4d4d4d;
-  width: inherit;
+  width: 500px;
   .table {
     border-collapse: collapse;
-    border: 3px solid #ddd;
+    border: 2px solid #ddd;
+    display: grid;
+    position: relative;
 
 
     td {
@@ -18,7 +24,7 @@
     .tablehead {
       padding: 10px;
       text-align: center;
-      background-color: #4caf50;
+      background-color: #6667a9;
       color: white;
       th {
         border: 1px solid #ddd;

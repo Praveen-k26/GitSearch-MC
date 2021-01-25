@@ -8,13 +8,6 @@ import QueryHandler from "./graphql/queryHandler";
 
 
 function App() {
-
-
-    const [avatarurl, setAvatarurl] = useState('avatarurl here');
-    const [htmlurl, sethtmlurl] = useState('html url here');
-    const [name, setName] = useState('Praveen');
-    const [bio, setBio] = useState('Software');
-    const [location, setLocation] = useState('Salt Lake City');
     const [userSearch, setUserSearch] = useState('');
     const [searchText, setSearchText] = useState('');
 

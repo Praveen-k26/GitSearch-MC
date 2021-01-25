@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { ApolloProvider } from 'react-apollo';
-import { createHttpLink } from 'apollo-link-http';
-import { InMemoryCache } from 'apollo-cache-inmemory';
+import {ApolloProvider} from 'react-apollo';
+import {ApolloProvider as ApolloHookProvider} from 'react-apollo-hooks';
+import {createHttpLink} from 'apollo-link-http';
+import {InMemoryCache} from 'apollo-cache-inmemory';
 import ApolloClient from 'apollo-boost';
-import { ErrorBoundary } from 'react-error-boundary';
+import {ErrorBoundary} from 'react-error-boundary';
 import ErrorHandling from "./errorHandling/errorHandling";
-
 
 
 const httpLink = createHttpLink({
@@ -18,12 +18,12 @@ const httpLink = createHttpLink({
 
 const cache = new InMemoryCache();
 const client = new ApolloClient({
-    // link: httpLink,
-    uri: 'https://api.github.com/graphql',
+    link: httpLink,
+    // uri: 'https://api.github.com/graphql',
     cache,
     headers: {
         Accept: "application/json",
-        Authorization: `token a34d779bed56ef8df59898da1e1623767e165906`,
+        Authorization: `token f1ce8aa4d0eaa23b2b4bc076cd72200a51453ad4`,
         // Authorization:`token ${process.env.REACT_APP_GITHUB_TOKEN}`,
         'content-type': 'application/json',
     }
@@ -50,8 +50,6 @@ const client = new ApolloClient({
 // }).then(res => console.log(res));
 
 
-
-
 // const client = new ApolloClient({
 //     uri: 'https://api.github.com/graphql',
 //     request: async operation => {
@@ -65,7 +63,6 @@ const client = new ApolloClient({
 //         });
 //     }
 // })
-
 
 
 // const REPOS_QUERY = gql`
@@ -107,14 +104,15 @@ const client = new ApolloClient({
 //
 
 
-
 ReactDOM.render(
-<ApolloProvider client={client}>
-    <ErrorBoundary fallbackComponent = {ErrorHandling}>
-            <App />
-    </ErrorBoundary>
-</ApolloProvider>,
-  document.getElementById('root')
+    <ApolloProvider client={client}>
+        <ApolloHookProvider client={client}>
+            <ErrorBoundary fallbackComponent={ErrorHandling}>
+                <App/>
+            </ErrorBoundary>
+        </ApolloHookProvider>
+    </ApolloProvider>,
+    document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -11,7 +11,7 @@ html {
 
 a{
     text-decoration: none;
-    color: #fff;
+    color: black;
 }
 
 section {
@@ -50,7 +50,7 @@ section {
 /*}*/
 
 .card {
-    width: 32rem;
+    /*width: 32rem;*/
     background-color: #ebeef8;
     display: flex;
     flex-direction: column;
@@ -160,6 +160,8 @@ section {
     }
     .card:nth-child(1) {
         animation: fadeIn .5s .5s backwards;
+        width: min-content;
+        /*width: 5rem;*/
     }
     .card:nth-child(2) {
         animation: fadeIn .5s .1s backwards;

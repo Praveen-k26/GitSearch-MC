@@ -11,7 +11,7 @@ html {
 
 a{
   text-decoration: none;
-  color: #fff;
+  color: black;
 }
 
 section {
@@ -60,22 +60,22 @@ section {
   box-shadow: .3rem .5rem 3rem rgba(0,0,0,0.2);
 }
 
-.card .card-img{
-  width: 100%;
-  height: 26rem;
-  object-fit: cover;
-  clip-path: polygon(0 0, 100% 0, 100% 60%, 0% 100%);
-}
+/*.card .card-img{*/
+/*  width: 100%;*/
+/*  height: 26rem;*/
+/*  object-fit: cover;*/
+/*  clip-path: polygon(0 0, 100% 0, 100% 60%, 0% 100%);*/
+/*}*/
 
-.profile-img{
-  width: 15rem;
-  height: 15rem;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-top: -11rem;
-  z-index: 999;
-  border: 1rem solid #ebeef8;
-}
+/*.profile-img{*/
+/*  width: 15rem;*/
+/*  height: 15rem;*/
+/*  object-fit: cover;*/
+/*  border-radius: 50%;*/
+/*  margin-top: -11rem;*/
+/*  z-index: 999;*/
+/*  border: 1rem solid #ebeef8;*/
+/*}*/
 
 .card h1{
   font-size: 2.5rem;
@@ -83,19 +83,19 @@ section {
   margin:1.5rem 0;
 }
 
-.job-title{
-  color: #777;
-  font-size: 1.5rem;
-  font-weight: 300;
-}
+/*.job-title{*/
+/*  color: #777;*/
+/*  font-size: 1.5rem;*/
+/*  font-weight: 300;*/
+/*}*/
 
-.about{
-  font-size: 1.5rem;
-  margin: 1.5rem 0;
-  font-style: italic;
-  text-align: center;
-  color: #333;
-}
+/*.about{*/
+/*  font-size: 1.5rem;*/
+/*  margin: 1.5rem 0;*/
+/*  font-style: italic;*/
+/*  text-align: center;*/
+/*  color: #333;*/
+/*}*/
 
 .card .btn{
   padding: 1rem 2.5rem;
@@ -116,23 +116,23 @@ section {
   transform: translateY(0);
   box-shadow: none;
 }
-.social-media {
-  width: 100%;
-  list-style: none;
-  display: flex;
-  justify-content: space-evenly;
-  padding: 2rem 0;
-  margin-top: 1.5rem;
-  border-top: 1px solid rgba(0,0,0, .1);
-}
+/*.social-media {*/
+/*  width: 100%;*/
+/*  list-style: none;*/
+/*  display: flex;*/
+/*  justify-content: space-evenly;*/
+/*  padding: 2rem 0;*/
+/*  margin-top: 1.5rem;*/
+/*  border-top: 1px solid rgba(0,0,0, .1);*/
+/*}*/
 
-.social-media i{
-  font-size: 3rem;
-  transition: color .5s;
-}
-.fa-twitter-square{
-  color: #55acee;
-}
+/*.social-media i{*/
+/*  font-size: 3rem;*/
+/*  transition: color .5s;*/
+/*}*/
+/*.fa-twitter-square{*/
+/*  color: #55acee;*/
+/*}*/
 
 .fa-twitter-square:hover {
   color: #45e19f;
@@ -143,11 +143,13 @@ section {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    width: auto;
   }
 
   .card{
     margin:2rem;
     transition: transform .5s;
+    width: 40rem;
   }
 
   @keyframes fadeIn {
@@ -161,9 +163,12 @@ section {
     .card:nth-child(1) {
       animation: fadeIn .5s .5s backwards;
       margin-left: auto;
+      width: auto;
+
     }
   .card:nth-child(2) {
     animation: fadeIn .5s .1s backwards;
+
   }
 
   .card:hover{
@@ -174,8 +179,10 @@ section {
 .table {
   border-collapse: collapse;
   /*border: 2px solid #ddd;*/
-  display: grid;
+  display: block;
   position: relative;
+  table-layout: fixed;
+  width: max-content;
 }
 
 .tablehead {
@@ -197,5 +204,10 @@ td {
   border: 1px solid #ddd;
   padding: 12px;
 }
+
+
+
+
+
 
 

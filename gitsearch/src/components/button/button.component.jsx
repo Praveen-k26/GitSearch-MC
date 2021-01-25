@@ -1,8 +1,8 @@
 import React from 'react';
 
 
-const CustomButton = ({children, ...otherProps})  => (
-    <button {...otherProps} className='button'>
+const CustomButton = ({children,onclick, ...otherProps})  => (
+    <button {...otherProps} className='button,' onClick={onclick} data-test='customButton'>
         {children}
     </button>
 );

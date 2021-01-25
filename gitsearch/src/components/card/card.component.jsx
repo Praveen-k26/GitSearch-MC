@@ -4,39 +4,11 @@ import QueryHandler from "../../graphql/queryHandler";
 import './card.styles.scss'
 
 const Card = ({
-                  avatarurl,
-                  htmlurl,
                     cardData,
-                  name,
-                  bio,
-                  email,
-                  followers,
-                  following,
-                  twitter,
-                  website,
-                  location,
-                    repos,
                   searchText}) => {
 
     return (
-
-        // <div className='wrapper'>
-        //
-        //     <div className='container'>
-        //         <header className='header'>
-        //
-        //             <img src={avatarurl} alt={name} className='img'/>
-        //                 <h4 className='name'>{name}</h4>
-        //         </header>
-        //         <p className='bio'>{bio}</p>
-        //         <p className='email'>{email}</p>
-        //         <a className='website' href={website}>{website}</a>
-        //         <p className='location'>{location}</p>
-        //         <a href={twitter} className='a'>Follow</a>
-        //         <span><p>Followers:{followers}</p></span> <span><p>Following:{following}</p></span>
-        //     </div>
-        // </div>
-        <div className='wrapper'>
+        <div className='wrapper' data-test='card-wrapper'>
             {searchText && <QueryHandler searchParam={searchText} />}
             {cardData && cardData.length > 0 ? cardData.map((data,index) => {
                 return <>

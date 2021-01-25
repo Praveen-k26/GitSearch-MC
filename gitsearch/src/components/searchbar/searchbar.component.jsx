@@ -4,16 +4,17 @@ import './searchbar.styles.css';
 import CustomButton from "../button/button.component";
 
 
-const SearchBar = ({placeholder, handleChange,handleClick, label,onSubmit,onClear, value, ...otherProps}) => {
+const SearchBar = ({placeholder,searchText,setSearchText, handleChange,handleClick, label,onSubmit,onClear, value, ...otherProps}) => {
 
 
     return (
-    <section className='section' data-test='searchbarsection'>
+    <div className='section' data-test='searchbarsection'>
         <div className='section-center'>
-            <form onSubmit={onSubmit} data-test='onsubmit'>
+            <form onSubmit={onSubmit} data-test='onsubmit' className='searchBarForm'>
                 <div className='form-control'>
                     <MdSearch />
                     <input
+                        autoFocus
                         type='text'
                         placeholder={placeholder}
                         value={value}
@@ -21,9 +22,10 @@ const SearchBar = ({placeholder, handleChange,handleClick, label,onSubmit,onClea
                         data-test='searchfield'
                         onClick={handleClick}
                         {...otherProps}
+                        className='search-inputfield'
                     />
                     <span>
-                        <CustomButton data-test='clearForm' type='submit' onClick={onClear}>Clear</CustomButton>
+                        <CustomButton data-test='clearForm'  className='clear-Form' type='submit' onClick={onClear}>Clear</CustomButton>
                     </span>
                     <span>
                        <CustomButton data-test='submitButton' type='submit'>Submit</CustomButton>
@@ -33,7 +35,7 @@ const SearchBar = ({placeholder, handleChange,handleClick, label,onSubmit,onClea
             </form>
 
         </div>
-    </section>
+    </div>
 
 )
 }

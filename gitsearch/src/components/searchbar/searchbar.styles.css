@@ -31,6 +31,7 @@ input {
  color: gray;
  padding: 0.25rem 0.5rem;
  width: 500px;
+    border-radius: inherit;
 }
 input::placeholder {
  color: gray;

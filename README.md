@@ -1,4 +1,4 @@
-### GitSearch
+# GitSearch
 [Website](https://praveen-k26.github.io/gitsearch-pk/)
 
 
@@ -24,7 +24,7 @@ The following steps will guide you through the process.
 7. Create a `.env` file in your Project folder's root.
 8. Make sure you add your .env file to `.gitignore` so that you don't commit your `PAT` by accident.
 
-### Features
+# Features
 # Search for a user and see their repositories.
 When a user types a text in the search bar and hits submit, a query is triggered to fetch a list of required details. You click on `clear button`, it will clear the text from the input field.It displays the data if a valid user name is searched. In case of a network issue or if the user does not exist, it will display a generic error message. I used `apollo-boost`, `react-apollo`, `graphql-tag`, `graphql`, `apollo-client` npm packages for this purpose.
 

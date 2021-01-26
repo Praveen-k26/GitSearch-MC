@@ -1,4 +1,7 @@
-### GitSearch
+# GitSearch
+[Website](https://praveen-k26.github.io/gitsearch-pk/)
+
+
 This is a simple git search application. Enter the user name and click on search to see a list of first 20 repositories. The table displays the Repo name, date it is created on, date updated on, number of stars and forks as well. 
 
 Also, you will get to see a card right next to the table. The card displays further more details about the owner like the Profile picture, Username, bio,location, profession, contact details, website and the twitter handle.
@@ -21,7 +24,7 @@ The following steps will guide you through the process.
 7. Create a `.env` file in your Project folder's root.
 8. Make sure you add your .env file to `.gitignore` so that you don't commit your `PAT` by accident.
 
-### Features
+# Features
 # Search for a user and see their repositories.
 When a user types a text in the search bar and hits submit, a query is triggered to fetch a list of required details. You click on `clear button`, it will clear the text from the input field.It displays the data if a valid user name is searched. In case of a network issue or if the user does not exist, it will display a generic error message. I used `apollo-boost`, `react-apollo`, `graphql-tag`, `graphql`, `apollo-client` npm packages for this purpose.
 
@@ -91,3 +94,4 @@ This will open a whole new window also you will have a cypress folder auto gener
 
 ## Final Verdict:
  I had a wonderful time working on this challenge. It helped me learn new concepts, brush up my existing skills and an amazing intro to Graphql and Cypress. I had to restric myself in many aspects because of the time contraints. I would love to keep adding more updates to this particular project.
+
